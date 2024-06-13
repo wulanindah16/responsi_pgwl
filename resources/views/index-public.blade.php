@@ -141,53 +141,53 @@
             point.addData(data);
             map.addLayer(point);
 
-            // var restLayers = L.geoJson(data, {
-            //     pointToLayer: function(feature, latlng) {
+            var restLayers = L.geoJson(data, {
+                pointToLayer: function(feature, latlng) {
 
-            //         var props = L.Util.extend({
-            //                 'name': '',
-            //                 'description': '',
-            //                 'image': ''
-            //             }, feature.properties),
-            //             textPopup = L.Util.template(
-            //                 "<h3>{name}</h3><p>{description}</p><img src='{{ asset('storage/images/') }}/{image}' class='img-thumbnail' alt='{name}'>",
-            //                 props),
-            //             style = {
-            //                 radius: 5,
-            //                 opacity: 0.8,
-            //                 fillColor: '#ddd',
-            //                 fillOpacity: 0.8
-            //             };
+                    var props = L.Util.extend({
+                            'name': '',
+                            'description': '',
+                            'image': ''
+                        }, feature.properties),
+                        textPopup = L.Util.template(
+                            "<h3>{name}</h3><p>{description}</p><img src='{{ asset('storage/images/') }}/{image}' class='img-thumbnail' alt='{name}'>",
+                            props),
+                        style = {
+                            radius: 5,
+                            opacity: 0.8,
+                            fillColor: '#ddd',
+                            fillOpacity: 0.8
+                        };
 
-            //         return L.circleMarker(latlng, style).bindPopup(textPopup);
-            //     }
-            // }).addTo(map);
+                    return L.circleMarker(latlng, style).bindPopup(textPopup);
+                }
+            }).addTo(map);
 
-            // var fuse = new Fuse(data.features, {
-            //     keys: [
-            //         'properties.name',
-            //     ]
-            // });
+            var fuse = new Fuse(data.features, {
+                keys: [
+                    'properties.name',
+                ]
+            });
 
-            // L.control.search({
-            //         layer: restLayers,
-            //         propertyName: 'name',
-            //         filterData: function(text, records) {
-            //             var jsons = fuse.search(text),
-            //                 ret = {},
-            //                 key;
+            L.control.search({
+                    layer: restLayers,
+                    propertyName: 'name',
+                    filterData: function(text, records) {
+                        var jsons = fuse.search(text),
+                            ret = {},
+                            key;
 
-            //             for (var i in jsons) {
-            //                 key = jsons[i].properties.name;
-            //                 ret[key] = records[key];
-            //             }
+                        for (var i in jsons) {
+                            key = jsons[i].properties.name;
+                            ret[key] = records[key];
+                        }
 
-            //             return ret;
-            //         }
-            //     })
-            //     .on('search:locationfound', function(e) {
-            //         e.layer.openPopup();
-            //     }).addTo(map);
+                        return ret;
+                    }
+                })
+                .on('search:locationfound', function(e) {
+                    e.layer.openPopup();
+                }).addTo(map);
         });
 
         /* GeoJSON Polyline */

@@ -68,3 +68,45 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 # responsi_pgwl
  82eae3eab155cf504414d9082c2804d5e8c2c9e4
+
+ # responsi
+<h2 text-center> MABADEST </h2>
+<h3 text-center> Manggarai Barat Destination</h3>
+
+<p align = "justify"> MABADEST merupakan webgis yang berisi data wisata di Kabupaten Manggarai Barat, Provinsi Nusa Tenggara Barat. Kabupaten Manggarai Barat menyimpan menyimpan keindahan alam yang menakjubkan dan hewan purba yang mendunia. Mulai dari hewan endemik komodo di Pulau Rinca dan Pulau Komodo, deretan pulau eksotis, keragaman hayati bawah laut, hingga pantai. Wisata Kabupaten Manggarai Barat dapat diakses melalui jalur darat, laut, dan juga udara. Keindahan Pulau Komodo dengan kekayaan budaya lokal dan pulau-pulau eksotis di sekitarnya membuat Kabupaten Manggarai Barat menjadi tempat wisata yang potensial dan ramai dikunjungi.</p>
+
+<hr>
+
+<h3>Komponen Pembangun Produk</h3>
+<p> 1. Laravel (Framework PHP)
+<p> 2. DBeaver (Pengelola Database)
+<p> 3. HTML, PHP, CSS (Struktur dan Desain Website)
+<p> 4. Leaflet JS (Tampilan Peta)</p>
+<p> 5. Bootstrap (Tampilan Website)</p>
+<p> 6. GeoJSON (Batas Administrasi) </p>
+<p> 7. Geoserver (Sharing Data Titik Wisata)</p>
+<p> 8. Google Font (Tampilan Tulisan)</p>
+<p> 9. Fontawesome (Icon)</p>
+
+<hr>
+
+<h3>Sumber Data</h3>
+<p> 1. Data titik tempat wisata Kab Manggarai Barat dari OSM</p>
+<p> 2. Data Shapefile Kab Manggarai Barat dari InaGeoportal (Batas Administrasi)</p>
+
+<hr>
+
+<h3>Landing Page</h3>
+![image](https://github.com/wulanindah16/responsi_pgwl/assets/142876855/a1ca5cf2-cf80-41bd-9eb1-92ec59346e94)
+
+<img src="storage/page/landing.png">
+<h3>Tampilan Peta Destinasi Wisata</h3>
+<img src="assets/page/peta.png">
+<img src="assets/page/wisata.png">
+<h3>Tampilan Tabel Destinasi Wisata</h3>
+<img src="assets/page/destinasi.png">
+<img src="assets/page/destinasi2.png">
+<h3>Info</h3>
+
+<h3>Dashboard</h3>
+<img src="assets/page/kontak.png">

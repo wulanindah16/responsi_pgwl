@@ -18,7 +18,7 @@
     <div class="container">
         <div class="card shadow">
             <div class="card-header">
-                <h3 class="card-title">Data</h3>
+                <h3 class="card-title">Data Destinasi Wisata</h3>
             </div>
             <div class="card-body">
                 <div class="row">
@@ -28,7 +28,7 @@
                            <p style="font-size: 32pt">{{$total_points}}</p>
                           </div>
                     </div>
-                    <div class="col">
+                    {{-- <div class="col">
                         <div class="alert alert-success" role="alert">
                             <h4><i class="fa-solid fa-route"></i> Total Polylines</h4>
                             <p style="font-size: 32pt">{{$total_polylines}}</p>
@@ -39,7 +39,7 @@
                             <h4><i class="fa-solid fa-draw-polygon"></i> Total Polygons</h4>
                             <p style="font-size: 32pt">{{$total_polygons}}</p>
                            </div>
-                    </div>
+                    </div> --}}
                 </div>
                 <hr>
                 <p>Anda login sebagai <b>{{ Auth::user()->name }}</b> dengan email

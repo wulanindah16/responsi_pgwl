@@ -97,17 +97,17 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ## Tangkapan Layar
 <h3>Landing Page</h3>
-![Tangkapan Layar 1](landing.png)
-![Tangkapan Layar 2](landing2.png)
+![Tangkapan Layar 1] (landing.png)
+![Tangkapan Layar 2] (landing2.png)
 
 <h3>Tampilan Peta Destinasi Wisata</h3>
-![Tangkapan Layar 3](map.png)
+![Tangkapan Layar 3] (map.png)
 
 <h3>Tampilan Tabel Destinasi Wisata</h3>
-![Tangkapan Layar 4](wisata.png)
+![Tangkapan Layar 4] (wisata.png)
 
 <h3>Info</h3>
-![Tangkapan Layar 5](info.png)
+![Tangkapan Layar 5] (info.png)
 
 <h3>Dashboard</h3>
-<img src="assets/page/kontak.png">
+![Tangkapan Layar 6] (dashboard.png)

@@ -23,6 +23,10 @@
         hr {
             color: rgb(236, 230, 230);
         }
+
+        body {
+    background-color: #cddcec; /* Warna latar belakang halaman */
+}
     </style>
 @endsection
 
@@ -39,8 +43,6 @@
             </div>
         </header>
     </div>
-
-    <hr class="card">
 
     <div class="container mt-1 text-center">
         <hr class="mt-2 mb-2">

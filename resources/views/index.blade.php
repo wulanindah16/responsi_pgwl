@@ -4,6 +4,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css">
     <link rel="stylesheet" href="{{ url('leaflet-search/leaflet-search.css') }}">
     <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <link rel="stylesheet" href="assets/plugins/leaflet-routing/leaflet-routing-machine.css" />
+
     <style>
         html,
         body {
@@ -164,6 +166,8 @@
     <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.43.0/L.Control.Locate.min.js">
     </script>
     <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+        <script src="frontend/leaflet-routing/leaflet-routing-machine.js"></script>
+        <script src="frontend/leaflet-routing/leaflet-routing-machine.min.js"></script>
     <script>
         //Map
         var map = L.map('map').setView([-8.599527615163064, 119.88444242903452], 10)
@@ -250,57 +254,6 @@
             .catch(error => {
                 console.error('Error loading the GeoJSON file:', error);
             });
-
-
-
-        // // Membuat layer untuk menampung data GeoJSON
-        // var mamba = L.geoJson(null, {
-        //     style: function(feature) {
-        //         // Definisikan gaya berdasarkan properti GeoJSON, misalnya warna atau ketebalan garis
-        //         return {
-        //             fillColor: '#3388ff',
-        //             weight: 2,
-        //             opacity: 1,
-        //             color: '#3388ff',
-        //             fillOpacity: 0.5
-        //         };
-        //     },
-        //     onEachFeature: function(feature, layer) {
-        //         // Event saat layer di klik
-        //         layer.on({
-        //             click: function(e) {
-        //                 var content = "<h4>Detail Kecamatan</h4>" +
-        //                     "<b>Kecamatan:</b> " + feature.properties.WADMKC;
-
-        //                 layer.bindPopup(content).openPopup();
-        //             },
-        //             mouseover: function(e) {
-        //                 // Event saat mouse di atas layer
-        //                 layer.setStyle({
-        //                     weight: 4,
-        //                     color: '#3388ff',
-        //                     opacity: 1
-        //                 });
-        //             },
-        //             mouseout: function(e) {
-        //                 // Event saat mouse meninggalkan layer
-        //                 mamba.resetStyle(layer);
-        //             }
-        //         });
-        //     }
-        // }).addTo(map);
-
-        // // Mendapatkan data GeoJSON dari server Laravel
-        // fetch('/api/geojson') // Ganti dengan endpoint yang sesuai untuk mendapatkan data GeoJSON dari Laravel
-        //     .then(function(response) {
-        //         return response.json();
-        //     })
-        //     .then(function(data) {
-        //         mamba.addData(data);
-        //     })
-        //     .catch(function(error) {
-        //         console.error('Error loading GeoJSON:', error);
-        //     });
 
         /* Digitize Function */
         var drawnItems = new L.FeatureGroup();
@@ -555,5 +508,17 @@
               },
            })
            .addTo(map);
+
+           /*Plugin Routing */
+           L.Routing.control({
+                waypoints: [
+                    L.latLng(-8.469461831719146, 120.09249844316379),
+                    L.latLng(-8.523712586766832, 120.15254780685707)
+                ],
+                routeWhileDragging: true,
+                position: "topright",
+                collapsed: false,
+            }).addTo(map);
+
     </script>
 @endsection

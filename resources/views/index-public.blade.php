@@ -1,8 +1,9 @@
 @extends('layouts.template')
 
 @section('styles')
-    <link rel="stylesheet" href="{{ url('leaflet-search/leaflet-search.css') }}">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+<link rel="stylesheet" href="{{ url('leaflet-search/leaflet-search.css') }}">
+<link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+<link rel="stylesheet" href="assets/plugins/leaflet-routing/leaflet-routing-machine.css" />
 
     <style>
         html,
@@ -31,6 +32,8 @@
     <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.43.0/L.Control.Locate.min.js">
     </script>
     <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <script src="frontend/leaflet-routing/leaflet-routing-machine.js"></script>
+        <script src="frontend/leaflet-routing/leaflet-routing-machine.min.js"></script>
     <script>
         //Map
         var map = L.map('map').setView([-8.599527615163064, 119.88444242903452], 10)
@@ -274,5 +277,18 @@
                 },
             })
             .addTo(map);
+
+            /*Plugin Routing */
+           L.Routing.control({
+                waypoints: [
+                    L.latLng(-8.469461831719146, 120.09249844316379),
+                    L.latLng(-8.523712586766832, 120.15254780685707)
+                ],
+                routeWhileDragging: true,
+                position: "topright",
+                collapsed: false,
+            }).addTo(map);
+
+
     </script>
 @endsection

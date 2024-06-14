@@ -69,15 +69,14 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 # responsi_pgwl
  82eae3eab155cf504414d9082c2804d5e8c2c9e4
 
- # responsi
-<h2 text-center> MABADEST </h2>
-<h3 text-center> Manggarai Barat Destination</h3>
-
+ 
+# MABADEST 
+## Manggarai Barat Destination
 <p align = "justify"> MABADEST merupakan webgis yang berisi data wisata di Kabupaten Manggarai Barat, Provinsi Nusa Tenggara Barat. Kabupaten Manggarai Barat menyimpan menyimpan keindahan alam yang menakjubkan dan hewan purba yang mendunia. Mulai dari hewan endemik komodo di Pulau Rinca dan Pulau Komodo, deretan pulau eksotis, keragaman hayati bawah laut, hingga pantai. Wisata Kabupaten Manggarai Barat dapat diakses melalui jalur darat, laut, dan juga udara. Keindahan Pulau Komodo dengan kekayaan budaya lokal dan pulau-pulau eksotis di sekitarnya membuat Kabupaten Manggarai Barat menjadi tempat wisata yang potensial dan ramai dikunjungi.</p>
 
 <hr>
 
-<h3>Komponen Pembangun Produk</h3>
+## Komponen Pembangun Produk
 <p> 1. Laravel (Framework PHP)
 <p> 2. DBeaver (Pengelola Database)
 <p> 3. HTML, PHP, CSS (Struktur dan Desain Website)
@@ -90,23 +89,30 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 <hr>
 
-<h3>Sumber Data</h3>
+## Sumber Data
 <p> 1. Data titik tempat wisata Kab Manggarai Barat dari OSM</p>
 <p> 2. Data Shapefile Kab Manggarai Barat dari InaGeoportal (Batas Administrasi)</p>
 
 <hr>
 
+## Tangkapan Layar
 <h3>Landing Page</h3>
-![image](https://github.com/wulanindah16/responsi_pgwl/assets/142876855/a1ca5cf2-cf80-41bd-9eb1-92ec59346e94)
 
-<img src="storage/page/landing.png">
+![Tangkapan Layar 1](landingpage.png)
+![Tangkapan Layar 1](landing3.png)
+
 <h3>Tampilan Peta Destinasi Wisata</h3>
-<img src="assets/page/peta.png">
-<img src="assets/page/wisata.png">
+
+![Tangkapan Layar 1](map.png)
+
 <h3>Tampilan Tabel Destinasi Wisata</h3>
-<img src="assets/page/destinasi.png">
-<img src="assets/page/destinasi2.png">
+
+![Tangkapan Layar 4](destinasi.png)
+
 <h3>Info</h3>
 
+![Tangkapan Layar 5](info.png)
+
 <h3>Dashboard</h3>
-<img src="assets/page/kontak.png">
+
+![Tangkapan Layar 6](dashboard1.png)
